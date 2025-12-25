@@ -1,66 +1,44 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+    <div className="container u-margin-block-start-50">
+      <section className="u-text-center u-flex u-flex-vertical u-gap-16 u-cross-center">
+        <h1 className="heading-level-1">Welcome to Your App</h1>
+        <p className="body-text-1" style={{ maxWidth: "600px" }}>
+          This is a starter template using <b>Next.js</b> and <b>Appwrite</b>.
+          The design system is powered by <b>@appwrite.io/pink</b>.
+        </p>
+
+        <div className="u-flex u-gap-16 u-margin-block-start-24">
+          <Link href="/signup" className="button is-primary">
+            Get Started
+          </Link>
+          <a href="https://appwrite.io/docs" target="_blank" rel="noreferrer" className="button is-secondary">
+            Read Documentation
           </a>
         </div>
-      </main>
+      </section>
+
+      <section className="u-margin-block-start-100">
+        <div className="card u-padding-32">
+          <h2 className="heading-level-3">Appwrite Features</h2>
+          <ul className="u-margin-block-start-16 u-flex u-flex-vertical u-gap-8">
+            <li className="u-flex u-gap-8 u-cross-center">
+              <span className="icon-check-circle u-color-text-success"></span>
+              <span>Authentication</span>
+            </li>
+            <li className="u-flex u-gap-8 u-cross-center">
+              <span className="icon-check-circle u-color-text-success"></span>
+              <span>Database</span>
+            </li>
+            <li className="u-flex u-gap-8 u-cross-center">
+              <span className="icon-check-circle u-color-text-success"></span>
+              <span>Storage</span>
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
   );
 }
