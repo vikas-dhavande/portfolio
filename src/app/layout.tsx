@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AuthProvider } from "@/context/AuthContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata: Metadata = {
   title: "My Appwrite App",
@@ -18,11 +19,13 @@ export default function RootLayout({
     <html lang="en">
       <body className="u-flex-vertical" style={{ minHeight: "100vh" }}>
         <AuthProvider>
-          <Header />
-          <main className="u-flex-grow-1">
-            {children}
-          </main>
-          <Footer />
+          <ThemeProvider>
+            <Header />
+            <main className="u-flex-grow-1">
+              {children}
+            </main>
+            <Footer />
+          </ThemeProvider>
         </AuthProvider>
       </body>
     </html>
