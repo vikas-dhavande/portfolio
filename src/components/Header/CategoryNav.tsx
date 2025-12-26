@@ -43,7 +43,7 @@ const categories = [
     },
     { name: "Research", href: "/research" },
     { name: "Guidelines", href: "/guidelines" },
-    { name: "Blogs", href: "/blogs" },
+    { name: "Blog", href: "/blog" },
     { name: "Jobs", href: "/jobs" },
 ];
 

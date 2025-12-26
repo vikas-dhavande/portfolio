@@ -1,0 +1,78 @@
+.searchSection {
+    background-color: #f0fdf4;
+    /* Light mint/green-50 */
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+:global(.dark) .searchSection {
+    background-color: #064e3b;
+    /* Darker green for dark mode */
+}
+
+.heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-neutral-900);
+    margin-bottom: 2.5rem;
+    line-height: 1.2;
+}
+
+:global(.dark) .heading {
+    color: #ecfdf5;
+}
+
+.inputWrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1.5rem;
+    /* Right padding for icon */
+    font-size: 1.1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 999px;
+    outline: none;
+    transition: all 0.2s ease;
+    color: var(--color-neutral-900);
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+:global(.dark) .searchInput {
+    background: #022c22;
+    border-color: #065f46;
+    color: #ecfdf5;
+}
+
+.searchInput:focus {
+    border-color: #10B981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.searchIcon {
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #10B981;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    pointer-events: none;
+    /* Let clicks pass through to input if needed, or make it clickable */
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .heading {
+        font-size: 1.75rem;
+    }
+
+    .searchSection {
+        padding: 3rem 1.5rem;
+    }
+}

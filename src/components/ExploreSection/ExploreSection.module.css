@@ -1,0 +1,118 @@
+/* Section Layout */
+.sectionContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 2rem 5rem 2rem;
+    /* Bottom padding for spacing */
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-neutral-900);
+    margin-bottom: 1.5rem;
+}
+
+/* Grid Layout */
+.exploreGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 Columns on Desktop */
+    gap: 2rem;
+}
+
+/* Card Styling */
+.card {
+    height: 200px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15);
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.viewMoreBtn {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.card:hover .viewMoreBtn {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: white;
+}
+
+/* Soft Matte Gradients */
+/* Reference colors approximated from request image */
+
+/* Blue/Indigo - DSA */
+.gradientBlue {
+    background: linear-gradient(135deg, #5c7cb1 0%, #4a69a0 100%);
+}
+
+/* Muted Red - Web Dev */
+.gradientRed {
+    background: linear-gradient(135deg, #c57e7e 0%, #b26868 100%);
+}
+
+/* Sage Green - AI/ML */
+.gradientGreen {
+    background: linear-gradient(135deg, #8abea3 0%, #76a88e 100%);
+}
+
+/* Lavender Purple - Machine Learning */
+.gradientPurple {
+    background: linear-gradient(135deg, #a795d3 0%, #907cc2 100%);
+}
+
+/* Sand Orange - Python */
+.gradientOrange {
+    background: linear-gradient(135deg, #e0b47e 0%, #d19f63 100%);
+}
+
+/* Mauve Pink - Java */
+.gradientPink {
+    background: linear-gradient(135deg, #c789a3 0%, #af708a 100%);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .exploreGrid {
+        grid-template-columns: 1fr;
+        /* Stack on mobile */
+    }
+
+    .card {
+        height: 160px;
+        /* Slightly smaller on mobile */
+    }
+
+    .cardTitle {
+        font-size: 1.25rem;
+    }
+}
